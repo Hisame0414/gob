@@ -79,16 +79,16 @@ function calculateChecks() {
 
     // 戦士、武闘家、斥候、野伏に基づいた命中判定を個別に表示
     if (war > 0) {
-        hitResultText.push(`<div>GS${war} 命中判定(戦士)</div>`);
+        hitResultText.push(`<div>GS${sklfcs+war+hitB} 命中判定(戦士)</div>`);
     }
     if (mar > 0) {
-        hitResultText.push(`<div>GS${mar} 命中判定(武闘家)</div>`);
+        hitResultText.push(`<div>GS${sklfcs+mar+hitB} 命中判定(武闘家)</div>`);
     }
     if (sct > 0) {
-        hitResultText.push(`<div>GS${sct} 命中判定(斥候)</div>`);
+        hitResultText.push(`<div>GS${sklfcs+sct+hitB} 命中判定(斥候)</div>`);
     }
     if (rng > 0) {
-        hitResultText.push(`<div>GS${rng} 命中判定(野伏)</div>`);
+        hitResultText.push(`<div>GS${sklfcs+rng+hitB} 命中判定(野伏)</div>`);
     }
 
     const dodge = skl + ref + maxbattleJob + dodgeB;  // 回避ボーナスを追加
