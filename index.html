@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ゴブスレチャパレ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>ゴブリンスレイヤーTRPG 判定ツール</h1>
+    <div class="container">
+        <!-- 基本ステータス -->
+        <div class="section main">
+            <h2>基本ステータス</h2>
+            <label>冒険者レベル: <select id="adv"></select></label><br>
+            <br>
+            <label>体力: <select id="stamina"></select></label><br>
+            <label>魂魄: <select id="mind"></select></label><br>
+            <label>技量: <select id="skill"></select></label><br>
+            <label>知力: <select id="intelligence"></select></label><br>
+            <label>集中: <select id="focus"></select></label><br>
+            <label>持久: <select id="endurance"></select></label><br>
+            <label>反射: <select id="reflex"></select></label><br>
+        </div>
+
+        <!-- 職業レベル -->
+        <div class="section sub">
+            <h2>職業レベル</h2>
+            <label>戦士: <select id="warrior"></select></label><br>
+            <label>武闘家: <select id="martial"></select></label><br>
+            <label>斥候:<select id="scout"></select></label><br>
+            <label>野伏: <select id="ranger"></select></label><br>
+            <label>魔術師:<select id="mage"></select></label><br>          
+            <label>神官: <select id="priest"></select></label><br>
+            <label>竜司祭: <select id="dragon"></select></label><br>
+            <label>精霊使い:<select id="spirit"></select></label><br>  
+            <label>死人占い師: <select id="necro"></select></label><br>
+        </div>
+
+        <!-- 判定補正 -->
+        <div class="section sub">
+            <h2>判定補正</h2>
+            <label>命中補正: <input type="number" id="hitB" value="0" min="-10" max="10"></label><br>
+            <label>回避補正: <input type="number" id="dodgeB" value="0" min="-10" max="10"></label><br>
+            <label>先制補正: <input type="number" id="speedB" value="0" min="-10" max="10"></label><br>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button onclick="calculateChecks()">判定値を計算</button>
+        <button onclick="resetFields()">リセット</button>
+        <button onclick="copyOutput()">コピー</button>
+    </div>
+    <div class="output" id="result"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
