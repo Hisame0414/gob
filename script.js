@@ -69,7 +69,7 @@ function calculateChecks() {
     const CC = stm + ref + war; //移動妨害判定
     const maxCCC = Math.max(stm + fcs + war, skl + fcs + war , stm + fcs + mar, skl + fcs + mar); //移動妨害対抗判定
     const hitResultText = [];  // 命中判定を格納する配列
-    const resist = Math.max(prs, drg); //抵抗系判定
+    const resist = Math.max(adv, drg); //抵抗系判定
     const muscle = Math.max(war, mar);
     const sports = Math.max(sct, rng);
     const sports2 = Math.max(mar, sct, rng);
@@ -201,7 +201,7 @@ if (magicSectionVisible) {
 
     resultText += '<div>─────────運動系判定─────────</div>';  // 区切り
     resultText += `<div>GS${adv + sklfcs} 水泳判定(技量集中+冒)</div>`; //水泳判定 
-    resultText += `<div>GS${sports +sklend} 登攀/運動系(技量集中+野or斥)</div>`; //登攀判定運動系 
+    resultText += `<div>GS${sports +sklend} 登攀/運動系(技量持久+野or斥)</div>`; //登攀判定運動系 
     resultText += `<div>GS${sports2 +sklfcs} 軽業判定(技量集中+武or野or斥)</div>`; //軽業判定
     resultText += `<div>GS${sports2 +sklfcs} 跳躍判定(技量集中+武or野or斥)</div>`; //跳躍判定
     resultText += `<div>回避判定</div>`;
@@ -218,12 +218,12 @@ if (magicSectionVisible) {
 
     resultText += '<div>─────────知識系判定─────────</div>';  // 区切り
     resultText += `<div>GS${magic +intfcs} 怪物知識判定(知力集中+呪文系)</div>`; //怪物知識判定
-    resultText += `<div>GS${magic +intfcs} 博識判定(知力集中+呪文系)</div>`; //博識判定
+    resultText += `<div>GS${mag +intfcs} 博識判定(知力集中+魔)</div>`; //博識判定
     resultText += `<div>GS${mag +intfcs} 魔法知識判定(知力集中+魔)</div>`; //魔法知識判定
  
     resultText += '<div>─────────感知系判定─────────</div>';  // 区切り
     resultText += `<div>GS${sports +intfcs} 観察判定(知力集中+野or斥)</div>` ;//博識判定
-    resultText += `<div>GS${six +intref} 第六感判定(知力集中+野or斥or精)</div>`; //第六感判定
+    resultText += `<div>GS${six +intref} 第六感判定(知力反射+野or斥or精)</div>`; //第六感判定
 
     resultText += '<div>─────────移動系判定─────────</div>';  // 区切り
     resultText += `<div>GS${adv +stmend} 長距離移動判定(体力持久+冒)</div>`; //長距離移動判定
